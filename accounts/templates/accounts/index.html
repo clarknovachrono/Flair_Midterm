@@ -1,0 +1,44 @@
+{% extends 'accounts/navbar.html' %}
+{% load static %}
+{% block content %}
+<style>
+    #health_form_button{
+        padding: 10px;
+        display: inline-block;
+        background: var(--maroon);
+        color: var(--gold);
+        outline: none;
+        margin-top: 5px;
+        width: 150px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #features_button{
+        padding: 10px;
+        display: inline-block;
+        background: var(--gold);
+        color: var(--maroon);
+        outline: none;
+        width: 150px;
+        text-align: center;
+        margin-top: 5px;
+        text-transform: uppercase;
+    }
+</style>
+    <section class="hero">
+        <div class="left_side">
+            <h1>Teknoy Health Declaration Form Logger with Facial Recognition</h1>
+            <div class="hero_logos">
+                <img src="{% static 'images/form.jpg' %}" alt="form_log">
+                <img src="{% static 'images/face_recognition.png' %}" alt="face recognition">
+                <img src="{% static 'images/logs.jpg' %}" alt="logs">
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt natus enim eveniet earum officia eligendi labore itaque? Sed veritatis laboriosam error natus molestias cupiditate. Non officiis fugiat cumque veniam aperiam!</p>
+            <a href="{% url 'healthform' %}" id="health_form_button">Health Form</a>
+            <a href="" id="features_button">Features</a>
+        </div>
+        <div class="right_side">
+            <img src="{% static 'images/landing_page.jpg' %}" alt="landing page">
+        </div>
+    </section>
+{% endblock content %}
